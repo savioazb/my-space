@@ -15,11 +15,11 @@ export default function SliderTitle({ children, onInView, id }: TitleProps) {
     if (isInView) {
       onInView(id);
     }
-  }, [isInView]);
+  }, [isInView, onInView, id]);
   return (
     <p
       ref={ref}
-      className={`text-white text-3xl py-16 transition-opacity ${
+      className={`py-16 text-3xl text-white transition-opacity ${
         !isInView && "opacity-20"
       }`}
     >

@@ -19,7 +19,7 @@ export default async function CardGithub() {
         <div className="flex flex-col gap-2">
           <div className="flex gap-2 text-gray-400">
             <RxGithubLogo />
-            <p className=" text-xs uppercase">Commits this month</p>
+            <p className=" text-xs uppercase">Contributions this year</p>
           </div>
           <div className="flex items-center gap-2">
             <p className="text-3xl text-white">{totalContributions}</p>

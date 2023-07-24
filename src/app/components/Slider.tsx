@@ -1,7 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MeetWithWallet, Spotify, Universo, oiMo } from "./SliderCard";
 import SliderTitle from "./SliderTitle";
+import Screen from "./Screen";
 
 const projects = [
   {
@@ -36,7 +37,7 @@ export default function Slider() {
   }
 
   return (
-    <div className="flex w-full items-start gap-20">
+    <div className="flex w-full items-start gap-20 px-80">
       <div className="w-full py-[50vh]">
         <ul>
           {projects.map((project) => (
@@ -49,43 +50,17 @@ export default function Slider() {
         </ul>
       </div>
 
-      <div className="flex w-full items-center h-screen sticky top-0">
-        <div className="relative aspect-square w-full rounded-xl bg-gray-100 h-80">
-          {projects.map((project) => (
-            <project.card
-              key={project.id}
-              id={project.id}
-              projectActive={projectActive}
-            />
-          ))}
-          {/* <p
-            className={`transition-opacity ${
-              projectActive === "title1" ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            MWW
-          </p>
-          <p
-            className={`transition-opacity ${
-              projectActive === "title2" ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            Oi mo
-          </p>
-          <p
-            className={`transition-opacity ${
-              projectActive === "title3" ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            Universo
-          </p>
-          <p
-            className={`transition-opacity ${
-              projectActive === "title4" ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            Spotify
-          </p> */}
+      <div className="sticky top-0 flex h-screen w-full items-center">
+        <div className="relative aspect-square h-80 w-full rounded-xl ">
+          <Screen>
+            {projects.map((project) => (
+              <project.card
+                key={project.id}
+                id={project.id}
+                projectActive={projectActive}
+              />
+            ))}
+          </Screen>
         </div>
       </div>
     </div>
