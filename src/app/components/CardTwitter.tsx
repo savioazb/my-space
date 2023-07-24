@@ -15,7 +15,7 @@ export default function CardTwitter() {
           <p className="text-xs">Last tweet</p>
         </div>
         <div>
-          <p className="text-xl">👋 Hi! Let&apos;s build something together.</p>
+          <p className="text-xl">👋 Hi! Let&apos;s build something together</p>
         </div>
         <div className="flex gap-2">
           <Image
